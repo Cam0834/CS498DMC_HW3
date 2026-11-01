@@ -10,6 +10,7 @@ collection = None
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global client, db, collection
+    #I don't care you can have my key
     uri = "mongodb+srv://User:TLJKtUDr5OlSWmnd@cluster0.xsgbujs.mongodb.net/"
     client = AsyncIOMotorClient(uri)
     db = client['ev_db']
